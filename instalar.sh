@@ -9,7 +9,7 @@ sudo dpkg --add-architecture i386
 
 ## Adicionar PPA ##
 
-echo adicionando PPAs
+echo Adicionando PPAs
 
 wget -qO- https://repo.vivaldi.com/archive/linux_signing_key.pub | sudo apt-key add -
 
@@ -53,35 +53,35 @@ sudo dpkg -i /home/$USER/Downloads/*.deb
 
 sudo apt install --install-recommends winehq-stable wine-stable wine-stable-i386 wine-stable-amd64 -y
 
-sudo apt install lutris
+sudo apt install -y lutris
 
-sudo apt install vivaldi-stable
+sudo apt install -y vivaldi-stable
 
-sudo apt install playonlinux
+sudo apt install -y playonlinux
 
-sudo apt install indicator-kdeconnect
+sudo apt install -y indicator-kdeconnect
 
-sudo apt install kdeconnect
+sudo apt install -y kdeconnect
 
-sudo apt install openrazer-meta
+sudo apt install -y openrazer-meta
 
-sudo apt install polychromatic
+sudo apt install -y polychromatic
 
-sudo apt install tilix
+sudo apt install -y tilix
 
-sudo apt install gparted
+sudo apt install -y gparted
  
-sudo apt install neofetch
+sudo apt install -y neofetch
 
-sudo apt install qbittorrent
+sudo apt install -y qbittorrent
 
-sudo apt install vlc
+sudo apt install -y vlc
 
-sudo apt install gnome-tweaks
+sudo apt install -y gnome-tweaks
 
-sudo apt install gnome-tweak-tool
+sudo apt install -y gnome-tweak-tool
 
-sudo flatpak install flathub com.spotify.Client
+sudo flatpak install flathub -y com.spotify.Client
 
 echo Instalados
 
@@ -89,15 +89,24 @@ echo Instalados
 
 echo Atualizando...
 
-sudo apt update && sudo apt dist-upgrade -y ; sudo apt upgrade
+sudo apt update && sudo apt dist-upgrade -y ; sudo apt upgrade -y
 sudo flatpak update
+
+## Trocando programas padrão ##
+
+xdg-mime default nemo.desktop inode/directory application/x-gnome-saved-search
+
+gsettings set org.gnome.desktop.background show-desktop-icons false
+
+gsettings set org.nemo.desktop show-desktop-icons true
+
+sudo update-alternatives --config x-terminal-emulator
 
 ## Manual ##
 
 echo Instalar icones Zafiro Icons
 echo Instalar temas (Adapta, etc)
 echo Instalar extensões (Dock, Gnome Integracao, etc)
-echo Alterar programas padrões (Nemo, Tilix)
 echo Adicionar Neofetch
 echo Instalar notas, flux, synapse, stacer (Opcional)
 
