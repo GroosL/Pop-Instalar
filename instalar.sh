@@ -39,6 +39,10 @@ sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub
 
 ## Programas Externos ##
 
+git clone https://github.com/zayronxio/Zafiro-icons.git Zafiro
+
+mv Zafiro /home/$USER/.icons/
+ 
 mkdir /home/$USER/Downloads/Programas
 
 cd /home/$USER/Downloads/Programas
@@ -49,7 +53,11 @@ sudo wget -c https://repo.nordvpn.com/deb/nordvpn/debian/pool/main/nordvpn-relea
 
 sudo dpkg -i /home/$USER/Downloads/*.deb
 
+https://github.com/zayronxio/Zafiro-icons.git
+
 ## Programas APT e Flatpak ##
+
+cd
 
 sudo apt install --install-recommends winehq-stable wine-stable wine-stable-i386 wine-stable-amd64 -y
 
